@@ -14,7 +14,7 @@
     "build:component:wasm-xdr": "jsct new target/wasm32-unknown-unknown/release/encoder.wasm -o xdr/enocder.wasm",
     "build:dev:component:wasm-xdr": "jsct new target/wasm32-unknown-unknown/debug/encoder.wasm -o xdr/enocder.wasm",
     "build:transpile:wasm-xdr": "jsct transpile xdr/enocder.wasm --map console=../lib/console.js --out-dir xdr",
-    "test": "node ./xdr/test.js ./lib/hello_world.wasm hello"
+    "test": "node ./cli.js ./lib/hello_world.wasm hello"
   },
   "dependencies": {
     "@vercel/ncc": "^0.36.1",
