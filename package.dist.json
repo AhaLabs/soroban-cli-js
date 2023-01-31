@@ -1,0 +1,26 @@
+{
+    "name": "xdr-wasm-tools",
+    "description": "JavaScript tooling for working with WebAssembly Components",
+    "version": "0.3.0-beta.1",
+    "bin": {
+      "jsct": "cli.mjs"
+    },
+    "lib": {
+      "encoder": "./xdr/encoder.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/bytecodealliance/js-component-tools.git"
+    },
+    "keywords": [
+      "Wasm",
+      "WebAssembly",
+      "Component"
+    ],
+    "license": "(Apache-2.0 WITH LLVM-exception)",
+    "bugs": {
+      "url": "https://github.com/bytecodealliance/js-component-tools/issues"
+    },
+    "homepage": "https://github.com/bytecodealliance/js-component-tools#readme"
+  }
+  

@@ -1,0 +1,23 @@
+{
+  "name": "xdr-wasm-tools",
+  "type": "module",
+  "devDependencies": {
+    "mkdirp": "^1.0.4"
+  },
+  "scripts": {
+    "build": "npm run build:wasm && npm run build:wasm-xdr",
+    "build:dev": "npm run build:dev:wasm && npm run build:dev:wasm-xdr",
+    "build:wasm": "npm run build:dev:wasm -- --release",
+    "build:dev:wasm": "cargo build --workspace --target wasm32-unknown-unknown",
+    "build:wasm-xdr": "npm run build:component:wasm-xdr && npm run build:transpile:wasm-xdr",
+    "build:dev:wasm-xdr": "npm run build:dev:component:wasm-xdr && npm run build:transpile:wasm-xdr",
+    "build:component:wasm-xdr": "jsct new target/wasm32-unknown-unknown/release/encoder.wasm -o xdr/enocder.wasm",
+    "build:dev:component:wasm-xdr": "jsct new target/wasm32-unknown-unknown/debug/encoder.wasm -o xdr/enocder.wasm",
+    "build:transpile:wasm-xdr": "jsct transpile xdr/enocder.wasm --map console=../lib/console.js --out-dir xdr",
+    "test": "node ./xdr/test.js ./lib/hello_world.wasm hello"
+  },
+  "dependencies": {
+    "@vercel/ncc": "^0.36.1",
+    "js-component-tools": "^0.3.0-beta.2"
+  }
+}

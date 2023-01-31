@@ -1,0 +1,32 @@
+[package]
+name = "encoder"
+publish = false
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+test = false
+doctest = false
+
+[dependencies]
+wit-bindgen-guest-rust = { workspace = true, features = ['default'] }
+strval = { git = "https://github.com/AhaLabs/soroban-tools", rev = "168ca178162529fc4d84a038829109ea173fda2f"}
+# strval = { path = "../../../s/soroban-cli/cmd/strval" }
+serde_json = "1.0.82"
+
+
+[dependencies.soroban-env-host]
+version = "0.0.12"
+git = "https://github.com/stellar/rs-soroban-env"
+rev = "993c527abce72748405d71467498bffd63e061c1"
+
+[dependencies.soroban-ledger-snapshot]
+version = "0.4.1"
+git = "https://github.com/stellar/rs-soroban-sdk"
+rev = "e1c3de33942f0e997680645941787102ebf61e85"
+
+[dependencies.stellar-strkey]
+version = "0.0.7"
+git = "https://github.com/stellar/rs-stellar-strkey"
+rev = "6e9bb10"

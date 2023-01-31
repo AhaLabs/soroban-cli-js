@@ -1,0 +1,7 @@
+/node_modules
+/target
+/package-lock.json
+/obj
+/dist
+/test/output
+/jsct.sh
