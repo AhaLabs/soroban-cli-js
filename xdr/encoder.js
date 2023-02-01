@@ -204,7 +204,7 @@ export const exports = {
 };
 
 const $init = (async() => {
-  const module0 = fetchCompile(new URL('./enocder.core.wasm', import.meta.url));
+  const module0 = fetchCompile(new URL('./encoder.core.wasm', import.meta.url));
   const module1 = base64Compile('AGFzbQEAAAABBgFgAn9/AAMCAQAEBQFwAQEBBxACATAAAAgkaW1wb3J0cwEACg0BCwAgACABQQARAAALACAEbmFtZQEZAQAWaW5kaXJlY3QtY29uc29sZS1lcnJvcg==');
   const module2 = base64Compile('AGFzbQEAAAABBgFgAn9/AAIVAgABMAAAAAgkaW1wb3J0cwFwAQEBCQcBAEEACwEA');
   Promise.all([module0, module1, module2]).catch(() => {});

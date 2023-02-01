@@ -11,10 +11,10 @@
     "build:dev:wasm": "cargo build --workspace --target wasm32-unknown-unknown",
     "build:wasm-xdr": "npm run build:component:wasm-xdr && npm run build:transpile:wasm-xdr",
     "build:dev:wasm-xdr": "npm run build:dev:component:wasm-xdr && npm run build:transpile:wasm-xdr",
-    "build:component:wasm-xdr": "jsct new target/wasm32-unknown-unknown/release/encoder.wasm -o xdr/enocder.wasm",
-    "build:dev:component:wasm-xdr": "jsct new target/wasm32-unknown-unknown/debug/encoder.wasm -o xdr/enocder.wasm",
-    "build:transpile:wasm-xdr": "jsct transpile xdr/enocder.wasm --map console=../lib/console.js --out-dir xdr",
-    "test": "node ./cli.js ./lib/hello_world.wasm hello"
+    "build:component:wasm-xdr": "jsct new target/wasm32-unknown-unknown/release/encoder.wasm -o xdr/encoder.wasm",
+    "build:dev:component:wasm-xdr": "jsct new target/wasm32-unknown-unknown/debug/encoder.wasm -o xdr/encoder.wasm",
+    "build:transpile:wasm-xdr": "jsct transpile xdr/encoder.wasm --map console=../lib/console.js --out-dir xdr",
+    "test": "node ./cli.js ./lib/hello_world.wasm hello '{\"world\":\"world\"}'"
   },
   "dependencies": {
     "@vercel/ncc": "^0.36.1",

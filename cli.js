@@ -1,4 +1,4 @@
-import * as encoder from "./xdr/encoder";
+import * as encoder from "./xdr/encoder.js";
 import  * as fs from "node:fs/promises";
 
 let [wasm, fn, args]  = process.argv.slice(2);
