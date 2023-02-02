@@ -1,9 +1,9 @@
 {
-    "name": "xdr-wasm-tools",
+    "name": "soroban-cli",
     "description": "JavaScript tooling for working with WebAssembly Components",
     "version": "0.3.0-beta.1",
     "bin": {
-      "jsct": "cli.mjs"
+      "soroban": "cli.mjs"
     },
     "lib": {
       "encoder": "./xdr/encoder.js"

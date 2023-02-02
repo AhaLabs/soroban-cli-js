@@ -1,6 +1,6 @@
-import * as encoder from "./xdr/encoder.js";
+import { invoker } from "./dist/invoker/node/index.js";
 import  * as fs from "node:fs/promises";
 
-let [wasm, fn, args]  = process.argv.slice(2);
+let [wasm, contract_id, fn, args]  = process.argv.slice(2);
 
-console.log(encoder.exports.run(await fs.readFile(wasm), "aaa", fn, args));
+console.log(invoker.invoke(await fs.readFile(wasm), contract_id, fn, args));

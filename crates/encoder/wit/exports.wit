@@ -1,0 +1,15 @@
+default world encoder {
+  import console: pkg.console
+
+  export encoder: interface {
+
+    /// Encodes the given json string into xdr format
+    create-op: func(wasm: list<u8>, contract-id: string, func-name: string, json-args: string) -> result<list<u8>, string>
+
+    /// Decodes raw xdr into json
+    decode-ret: func(wasm: list<u8>, func-name: string, xdr-args: list<u8>) -> result<string, string>
+
+    /// execute the contract with a blank state
+    run: func(wasm: list<u8>, contract-id: string, func-name: string, json-args: string) -> result<string, string>
+  }
+}

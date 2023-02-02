@@ -1,0 +1,8 @@
+default world invoker {
+  import console: pkg.console
+
+  export invoker: interface {
+    /// execute the contract with a blank state
+    invoke: func(wasm: list<u8>, contract-id: string, func-name: string, json-args: string) -> result<string, string>
+  }
+}

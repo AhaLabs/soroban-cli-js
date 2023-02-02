@@ -5,11 +5,12 @@ use std::{sync::Once};
 
 use strval::Spec;
 
-wit_bindgen_guest_rust::generate!("wasm-xdr-tools");
+wit_bindgen_guest_rust::generate!("exports");
 
 struct WasmToolsJs(Vec<u8>);
+//oo
 
-export_wasm_xdr_tools_js!(WasmToolsJs);
+export_encoder!(WasmToolsJs);
 
 fn init() {
     static INIT: Once = Once::new();
@@ -22,7 +23,7 @@ fn init() {
     });
 }
 
-impl exports::Exports for WasmToolsJs {
+impl encoder::Encoder for WasmToolsJs {
     fn create_op(
         wasm: Vec<u8>,
         contract_id: String,
