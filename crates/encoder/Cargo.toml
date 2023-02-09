@@ -17,9 +17,7 @@ serde_json = "1.0.82"
 
 
 [dependencies.soroban-env-host]
-version = "0.0.12"
-git = "https://github.com/stellar/rs-soroban-env"
-rev = "993c527abce72748405d71467498bffd63e061c1"
+workspace = true
 
 [dependencies.soroban-ledger-snapshot]
 version = "0.4.1"

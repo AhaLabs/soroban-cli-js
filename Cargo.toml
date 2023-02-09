@@ -1,5 +1,6 @@
 [workspace]
-members = ["crates/*"]
+members = ["crates/*", "wasm-pack/*"]
+exclude = ["wasm-pack/*"]
 resolver = "2"
 
 [workspace.package]
@@ -10,3 +11,14 @@ version = "0.1.0"
 wit-bindgen-guest-rust = { git = 'https://github.com/bytecodealliance/wit-bindgen', default-features = false, features = [
     'macros',
 ] }
+strval = { git = "https://github.com/AhaLabs/soroban-tools", rev = "168ca178162529fc4d84a038829109ea173fda2f" }
+
+[workspace.dependencies.soroban-env-host]
+version = "0.0.12"
+git = "https://github.com/stellar/rs-soroban-env"
+rev = "993c527abce72748405d71467498bffd63e061c1"
+
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"

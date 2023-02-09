@@ -4,3 +4,4 @@
 /obj
 /test/output
 /jsct.sh
+node_modules/

@@ -11,8 +11,7 @@ doctest = false
 
 [dependencies]
 wit-bindgen-guest-rust = { workspace = true, features = ['default'] }
-strval = { git = "https://github.com/AhaLabs/soroban-tools", rev = "168ca178162529fc4d84a038829109ea173fda2f"}
-# strval = { path = "../../../s/soroban-cli/cmd/strval" }
+strval = { workspace = true }
 serde_json = "1.0.82"
 
 
